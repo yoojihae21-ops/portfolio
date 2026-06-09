@@ -194,6 +194,14 @@ h2 {
     background-color: #111;
     width: 100%;
     height: 155vh;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.about_me.active {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .about_main {
@@ -210,7 +218,7 @@ h2 {
     margin-bottom: 120px;
 }
 
-.dot {
+.about_main>.dot {
     width: 63px;
     height: 63px;
     position: absolute;
@@ -224,7 +232,7 @@ h2 {
     position: relative;
 }
 
-.keyword{
+.keyword {
     text-align: center;
     padding: 10px 30px;
     display: inline-block;
@@ -237,14 +245,16 @@ h2 {
     z-index: 9;
 }
 
-@keyframes floating2{
-    0%{
+@keyframes floating2 {
+    0% {
         transform: translateY(0);
     }
-    50%{
+
+    50% {
         transform: translateY(-15px);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }
@@ -267,30 +277,17 @@ h2 {
     left: -30px;
 }
 
-.about_img>.box {
-    width: 1150px;
-    height: 380px;
+.wrap_box {
+    width: 420px;
+    height: 420px;
     background-color: #00b176;
     border-radius: 500px;
-    margin-top: 10px;
-    z-index: 1;
-
-}
-.wrap_box{
-    position: absolute;
-    left: 0;
-    top: -91px;
-    width: 1150px;
-    height: 500px;
-    border-radius: 190px;
     overflow: hidden;
+    object-fit: cover;
 }
 
-.hand {
-    position: absolute;
-    right: 150px;
-    bottom: -260px;
-    z-index: 5;
+.wrap_box.active {
+    width: 1150px;
 }
 
 .name {
@@ -386,4 +383,184 @@ h3 {
 .barcon>p {
     font-size: 18px;
     margin-bottom: 14px;
+}
+
+.works {
+    height: 80vh;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    padding: 0 100px;
+    margin-top: 200px;
+    overflow: hidden;
+}
+
+.works_title {
+    height: 523px;
+    flex: 1;
+    position: relative;
+}
+
+.works_title>h3 {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.under {
+    transform: rotate(90deg);
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    font-size: 30px;
+    font-weight: 200;
+    animation: float 1.5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: rotate(90deg) translateX(0);
+    }
+
+    50% {
+        transform: rotate(90deg) translateX(10px);
+    }
+
+    100% {
+        transform: rotate(90deg) translateX(0);
+    }
+}
+
+.project_slider {
+    flex: 3;
+    min-width: 0;
+}
+
+.slider {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    position: relative;
+}
+
+.track {
+    display: flex;
+    gap: 40px;
+    height: 100%;
+    transition: transform 0.6s ease;
+}
+
+.slide {
+    width: 300px;
+    height: 525px;
+    flex-shrink: 0;
+}
+
+.card_link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.hover>h3 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.hover>p:first-child {
+    font-size: 14px;
+    color: #fafafa;
+    font-weight: 200;
+    line-height: 20px;
+    border: solid #fafafa 1px;
+    padding: 2px 15px;
+    display: inline-block;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.hover>p:last-child {
+    font-size: 14px;
+    color: #fafafaa8;
+    font-weight: 200;
+    line-height: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    filter: blur(2px) brightness(0.6);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    z-index: 2;
+}
+
+.text {
+    position: absolute;
+    transition: all 0.4s ease;
+}
+
+.text.default {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text.hover {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card:hover .text.default {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.card:hover .text.hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.arrow_controls {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.arrow_controls button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.arrow_controls button:hover {
+    background: #111;
+    color: #fff;
 }
