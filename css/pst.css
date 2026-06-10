@@ -707,7 +707,7 @@ h1 {
     }
 
     h2 {
-        font-size: 52px;
+        font-size: 58px;
         line-height: 52px;
         margin-top: 60px;
         margin-bottom: 30px;
@@ -729,6 +729,12 @@ h1 {
 
     .title_wrap {
         display: block;
+    }
+
+    .main_title>p{
+        margin-top: 40px;
+        font-size: 11px;
+        line-height: 14px;
     }
 
     .face {
