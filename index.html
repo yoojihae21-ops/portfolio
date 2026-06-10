@@ -11,11 +11,13 @@
 </head>
 
 <body>
+    <a href="#top" class="top_btn">TOP</a>
+    
     <header class="main_header">
         <div class="left_header">
             <nav class="main_menu">
                 <div class="top_menu">
-                    <a href="#">Intro</a>
+                    <a href="#intro">Intro</a>
                 </div> <!-- top_menu -->
             </nav> <!-- main_menu -->
         </div> <!-- left_header -->
@@ -23,20 +25,20 @@
         <div class="right_header">
             <nav class="main_menu">
                 <div class="top_menu">
-                    <a href="#">About me</a>
+                    <a href="#about">About me</a>
                 </div> <!-- top_menu -->
                 <div class="top_menu">
-                    <a href="#">Work</a>
+                    <a href="#work">Work</a>
                 </div> <!-- top_menu -->
                 <div class="top_menu">
-                    <a href="#" class="contact">Contact</a>
+                    <a href="#contac" class="contactmenu">Contact</a>
                 </div> <!-- top_menu -->
             </nav> <!-- main_menu -->
         </div> <!-- right_header -->
     </header> <!-- main_header -->
 
     <div class="wrap">
-        <section class="main_page">
+        <section id="intro" class="main_page">
             <div class="main_title">
                 <img class="face" src="img/face.gif" alt="">
                 <div class="title_wrap">
@@ -50,7 +52,7 @@
             </div> <!-- main_title -->
         </section> <!-- main_page -->
 
-        <section class="about_me">
+        <section id="about" class="about_me">
             <div class="about_main">
                 <div class="dot"></div>
                 <div class="about_title">
@@ -225,10 +227,10 @@
             </div> <!-- about_skill -->
         </section> <!-- about_me -->
 
-        <section class="works">
+        <section id="work" class="works">
             <div class="works_title">
                 <h3>Works</h3>
-                <p>하단 화살표를 클릭하여 <br> 더 많은 프로젝트를 보실 수 있습니다. <br> Click to view project</p>
+                <p>하단 화살표를 클릭하여 <br> 다양한 프로젝트를 보실 수 있습니다. <br> Click to view project</p>
 
                 <div class="arrow_controls">
                     <button class="prev">&lt;</button>
@@ -320,7 +322,41 @@
                 </div> <!-- slider -->
             </div> <!-- project_slider -->
         </section> <!-- works -->
+
+        <section id="contac" class="contact">
+            <div class="contact_wrap">
+                <h1>Thanks!</h1>
+                <div class="numail_wrap">
+                    <p class="tact_title">Contact</p>
+                    <div class="numail">
+                        <div class="numail_title">
+                            <p class="Phone">Phone</p>
+                            <p class="amail">Email</p>
+                        </div> <!-- numail_title -->
+                        <div class="numail_con">
+                            <p class="number">010-9414-2026</p>
+                            <p class="bmail">sungg45@naver.com</p>
+                        </div> <!-- numail_con -->
+                    </div> <!-- numail -->
+                </div> <!-- numail_wrap -->
+            </div> <!-- contact_wrap -->
+    
+            <div class="last_tact">
+                <p class="left_tact">
+                    V.030<br>
+                    Jun.2026
+                </p>
+                <p class="cen_tact">
+                    (&nbsp;&nbsp;&nbsp; Design Portfolio &nbsp;&nbsp;&nbsp;)
+                </p>
+                <p class="right_tact">
+                    Creator.<br>
+                    Yoo Ji Hye
+                </p>
+            </div>
+        </section> <!-- contact -->
     </div> <!-- wrap -->
+
 
     <script src="./js/script.js"></script>
 </body>
