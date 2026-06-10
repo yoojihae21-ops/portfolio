@@ -4,8 +4,8 @@ function check() {
     bars.forEach(bar => {
         const rect = bar.getBoundingClientRect();
 
-        if (top < window.innerHeight + 100) {
-            sec2.classList.add('active');
+        if (rect.top < window.innerHeight - 100) {
+            bar.style.width = bar.dataset.percent + '%';
         }
     });
 }
@@ -30,7 +30,7 @@ window.addEventListener('scroll', () => {
     const sec2 = document.querySelector('.about_me');
     const top = sec2.getBoundingClientRect().top;
 
-    if (top < window.innerHeight * 0.8) {
+    if (top < window.innerHeight + 100) {
         sec2.classList.add('active');
     }
 });
