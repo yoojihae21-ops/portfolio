@@ -44,7 +44,7 @@ let index = 0;
 function moveSlide(i) {
     index = i;
 
-    const slideWidth = slides[0].offsetWidth + 40;
+    const slideWidth = slides[0].offsetWidth + 20;
     track.style.transform = `translateX(-${i * slideWidth}px)`;
 }
 

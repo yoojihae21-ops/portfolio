@@ -404,6 +404,7 @@ h3 {
     padding: 0 100px;
     margin-top: 200px;
     overflow: hidden;
+    overflow-x: hidden;
 }
 
 .works_title {
@@ -431,6 +432,10 @@ h3 {
     animation: float 1.5s ease-in-out infinite;
 }
 
+.under_mo {
+    display: none;
+}
+
 @keyframes float {
     0% {
         transform: rotate(90deg) translateX(0);
@@ -448,6 +453,7 @@ h3 {
 .project_slider {
     flex: 3;
     min-width: 0;
+    overflow: hidden;
 }
 
 .slider {
@@ -455,13 +461,16 @@ h3 {
     height: 650px;
     overflow: hidden;
     position: relative;
+    max-width: 100%;
 }
 
 .track {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     height: 100%;
+    width: max-content;
     transition: transform 0.6s ease;
+    flex-wrap: nowrap;
 }
 
 .slide {
@@ -873,14 +882,7 @@ h1 {
         position: relative;
         padding-bottom: 60px;
         margin-bottom: 80px;
-        overflow: visible;
-    }
-
-    .under {
-        position: absolute;
-        left: 50%;
-        bottom: -600px;
-        transform: translateX(-50%);
+        overflow: hidden;
     }
 
     .works_title {
@@ -914,9 +916,10 @@ h1 {
     }
 
     .arrow_controls {
-        grid-area: button;
+        display: none;
+        /* grid-area: button;
         align-self: end;
-        margin: 0;
+        margin: 0; */
     }
 
     .text.default {
@@ -935,17 +938,27 @@ h1 {
 
     .track {
         touch-action: pan-y;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
         gap: 20px;
+
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
     }
 
     .slider {
         height: 420px;
         scroll-snap-align: center;
+        width: 100%;
     }
 
     .slide {
         width: 240px;
         height: 380px;
+        flex: 0 0 auto;
+        scroll-snap-align: center;
     }
 
     .contact {
@@ -957,6 +970,23 @@ h1 {
     .contact_wrap {
         display: block;
         margin-top: 0;
+        position: relative;
+    }
+
+    .under {
+        display: none;
+    }
+
+    .under_mo {
+        transform: rotate(90deg) translateX(-50%);
+        ;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -120px;
+        font-size: 30px;
+        font-weight: 200;
+        animation: float 1.5s ease-in-out infinite;
     }
 
     h1 {
