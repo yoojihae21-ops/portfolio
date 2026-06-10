@@ -417,6 +417,10 @@ h3 {
     font-weight: 800;
 }
 
+.mo_p {
+    display: none;
+}
+
 .under {
     transform: rotate(90deg);
     position: absolute;
@@ -856,8 +860,197 @@ h1 {
         height: 36px;
     }
 
-    .mobile_br{
-        display:none;
+    .mobile_br {
+        display: none;
     }
 
+    .works {
+        height: auto;
+        flex-direction: column;
+        padding: 0 20px;
+        margin-top: 100px;
+        gap: 40px;
+        position: relative;
+        padding-bottom: 60px;
+        margin-bottom: 80px;
+        overflow: visible;
+    }
+
+    .under {
+        position: absolute;
+        left: 50%;
+        bottom: -600px;
+        transform: translateX(-50%);
+    }
+
+    .works_title {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "title ."
+            "text button"
+            "under under";
+        row-gap: 15px;
+    }
+
+    .works_title>h3 {
+        grid-area: title;
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .pc_p {
+        display: none;
+    }
+
+    .mo_p {
+        display: block;
+    }
+
+    .works_title>p:not(.under) {
+        grid-area: text;
+    }
+
+    .arrow_controls {
+        grid-area: button;
+        align-self: end;
+        margin: 0;
+    }
+
+    .text.default {
+        display: none;
+    }
+
+    .text.hover {
+        opacity: 1;
+        transform: translateY(0);
+        position: absolute;
+    }
+
+    .card img {
+        filter: brightness(0.6);
+    }
+
+    .track {
+        touch-action: pan-y;
+        gap: 20px;
+    }
+
+    .slider {
+        height: 420px;
+        scroll-snap-align: center;
+    }
+
+    .slide {
+        width: 240px;
+        height: 380px;
+    }
+
+    .contact {
+        height: auto;
+        padding: 100px 20px 40px;
+        text-align: center;
+    }
+
+    .contact_wrap {
+        display: block;
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 50px;
+    }
+
+    .numail_wrap {
+        display: block;
+        margin-top: 0;
+    }
+
+    .tact_title {
+        font-size: 36px;
+        margin-bottom: 30px;
+        margin-top: 90px;
+    }
+
+    .numail {
+        display: block;
+        margin: 0;
+        font-size: 16px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Phone / Email 제목 숨김 */
+    .numail_title {
+        display: none;
+    }
+
+    .numail_con {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .number,
+    .bmail {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .last_tact {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .left_tact {
+        display: none;
+    }
+
+    .cen_tact {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .right_tact {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .top_btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 35px;
+        height: 35px;
+        border-radius: 3px;
+        border: 1px solid #111;
+        background: #fafafa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #111;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        z-index: 999;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    /* 터치(클릭)했을 때 */
+    .top_btn:active {
+        transform: scale(0.95);
+    }
+
+    .top_btn:hover {
+        background: #fafafa;
+        color: #111;
+    }
 }
