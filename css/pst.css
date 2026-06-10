@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 @font-face {
     font-family: 'Pretendard';
@@ -69,6 +70,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     letter-spacing: -0.05em;
     font-family: 'Pretendard';
@@ -101,10 +106,16 @@ a {
     gap: 40px;
 }
 
-.contact {
+.contactmenu {
     background-color: #111;
     border-radius: 30px;
     padding: 10px 20px;
+    color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.contactmenu:hover {
+    background: rgb(0, 177, 118);
     color: #fafafa;
 }
 
@@ -563,4 +574,158 @@ h3 {
 .arrow_controls button:hover {
     background: #111;
     color: #fff;
+}
+
+.contact {
+    width: 100%;
+    height: 55vh;
+    padding: 0 100px 80px;
+}
+
+h1 {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 200px;
+    line-height: 200px;
+}
+
+.contact_wrap {
+    display: flex;
+    gap: 280px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.tact_title {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.numail_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.numail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    gap: 10px;
+    margin-left: 3px;
+    margin-bottom: 10px;
+}
+
+.numail_title {
+    font-weight: 700;
+}
+
+.last_tact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.right_tact {
+    text-align: right;
+}
+
+.top_btn {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #111;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    z-index: 999;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.top_btn:hover {
+    background: #111;
+    color: #fafafa;
+}
+
+
+@media (max-width: 768px) {
+    .main_header {
+        padding: 0 20px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 14px;
+    }
+
+    .right_header>.main_menu {
+        gap: 15px;
+    }
+
+    .contactmenu {
+        padding: 6px 12px;
+        border-radius: 20px;
+    }
+
+    .main_page {
+        padding: 0 20px;
+        height: calc(100vh - 100px);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .main_title>p {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 52px;
+        line-height: 52px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .vertical {
+        font-size: 42px;
+        line-height: 40px;
+        position: absolute;
+        right: -30px;
+        top: -130px;
+    }
+
+    .title_wrap {
+        display: block;
+    }
+
+    .face {
+        width: 250px;
+        height: auto;
+
+        position: absolute;
+        right: -20px;
+        bottom: -180px;
+
+        left: auto;
+        top: auto;
+    }
+
 }
