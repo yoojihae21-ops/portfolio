@@ -682,7 +682,7 @@ h1 {
 
     .main_page {
         padding: 0 20px;
-        height: calc(100vh - 100px);
+        height: calc(60vh - 70px);
         position: relative;
         overflow: hidden;
     }
@@ -726,6 +726,137 @@ h1 {
 
         left: auto;
         top: auto;
+    }
+
+    .about_me {
+        height: auto;
+        padding-bottom: 80px;
+        transform: translateY(80px);
+        opacity: 0;
+        transition: all 0.8s ease;
+    }
+
+    .about_title>h3 {
+        font-size: 43px;
+        margin-bottom: 60px;
+    }
+
+    .about_me.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .about_main {
+        flex-direction: column;
+        padding: 100px 20px 0;
+        margin-bottom: 60px;
+        gap: 40px;
+    }
+
+    .about_main>.dot {
+        display: none;
+    }
+
+    .keyword {
+        padding: 6px 16px;
+        font-size: 14px;
+        border-radius: 20px;
+    }
+
+    .keyword01 {
+        top: 0;
+        right: 0;
+        left: auto;
+    }
+
+    .keyword02 {
+        top: 40px;
+        right: 30px;
+        left: auto;
+    }
+
+    .keyword03 {
+        top: 80px;
+        right: 0px;
+        left: auto;
+    }
+
+    .wrap_box {
+        width: 80%;
+        height: 250px;
+        margin: 0 auto;
+        transition: all .8s ease;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .wrap_box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .wrap_box,
+    .wrap_box.active {
+        width: 100%;
+        height: 250px;
+    }
+
+    .about_img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about_con {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 80px;
+        margin-bottom: 80px;
+    }
+
+    .con_item:last-child {
+        display: none;
+    }
+
+    .about_skill {
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about_skill>h3 {
+        margin: 0 0 30px;
+    }
+
+    .ps_ai,
+    .pr_htmlcss,
+    .cpa_fig {
+        width: 100%;
+    }
+
+    .barcon {
+        flex: 1;
+    }
+
+    .bar {
+        width: 100%;
+    }
+
+    .barline {
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .mobile_br{
+        display:none;
     }
 
 }
