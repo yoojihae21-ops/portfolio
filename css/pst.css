@@ -935,10 +935,12 @@ h1 {
 
     .card img {
         filter: brightness(0.6);
+        transform: scale(1.1);
+        filter: blur(2px) brightness(0.6);
     }
 
     .card {
-        padding-bottom: 10px;
+        padding-bottom: 0px;
     }
 
     .track {
@@ -951,7 +953,7 @@ h1 {
     }
 
     .slider {
-        height: 420px;
+        height: 426px;
         scroll-snap-align: center;
         width: 100%;
     }
