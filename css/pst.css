@@ -953,6 +953,7 @@ h1 {
 
         display: flex;
         scroll-behavior: smooth;
+        width: fit-content;
     }
 
     .slider {
