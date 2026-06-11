@@ -696,7 +696,7 @@ h1 {
 
     .main_page {
         padding: 0 20px 100px;
-        min-height: 80vh;
+        min-height: 100vh;
         height: auto;
         margin-bottom: 60px;
         position: relative;
@@ -744,8 +744,8 @@ h1 {
         height: auto;
 
         position: absolute;
-        right: 0px;
-        bottom: -180px;
+        bottom: 0;
+        transform: translateY(40%);
 
         left: auto;
         top: auto;
