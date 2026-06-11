@@ -732,7 +732,7 @@ h1 {
         display: block;
     }
 
-    .main_title>p{
+    .main_title>p {
         margin-top: 40px;
         font-size: 11px;
         line-height: 14px;
@@ -946,6 +946,11 @@ h1 {
         padding-bottom: 0px;
     }
 
+    .project_slider {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
     .track {
         touch-action: pan-y;
         flex-wrap: nowrap;
@@ -953,13 +958,15 @@ h1 {
 
         display: flex;
         scroll-behavior: smooth;
-        width: fit-content;
+        width: auto;
+        transform: none !important;
     }
 
     .slider {
         height: 426px;
         scroll-snap-align: center;
         width: 100%;
+        width: fit-content;
     }
 
     .slide {
