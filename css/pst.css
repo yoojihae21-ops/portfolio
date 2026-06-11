@@ -695,10 +695,9 @@ h1 {
     }
 
     .main_page {
-        padding: 0 20px 100px;
+        padding: 0 20px 60px;
         min-height: 60vh;
         height: auto;
-        margin-bottom: 60px;
         position: relative;
         overflow: visible;
         overflow-x: hidden;
