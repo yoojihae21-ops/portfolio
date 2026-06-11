@@ -701,6 +701,7 @@ h1 {
         position: relative;
         overflow: visible;
         overflow-x: hidden;
+        margin-bottom: 30px;
     }
 
     .main_title>p {
