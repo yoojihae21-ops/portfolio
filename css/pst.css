@@ -78,6 +78,7 @@ body {
     letter-spacing: -0.05em;
     font-family: 'Pretendard';
     color: #111;
+    overflow-x: hidden;
 }
 
 ul,
@@ -874,10 +875,6 @@ h1 {
     .icon {
         width: 36px;
         height: 36px;
-    }
-
-    .mobile_br {
-        display: none;
     }
 
     .works {
