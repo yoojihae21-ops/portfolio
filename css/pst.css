@@ -696,7 +696,8 @@ h1 {
 
     .main_page {
         padding: 0 20px;
-        height: calc(60vh - 70px);
+        min-height: 60vh;
+        height: auto;
         margin-bottom: 60px;
         position: relative;
         overflow: visible;
@@ -732,7 +733,7 @@ h1 {
         display: block;
     }
 
-    .main_title>p{
+    .main_title>p {
         margin-top: 40px;
         font-size: 11px;
         line-height: 14px;
@@ -743,7 +744,7 @@ h1 {
         height: auto;
 
         position: absolute;
-        right: -20px;
+        right: 0px;
         bottom: -180px;
 
         left: auto;

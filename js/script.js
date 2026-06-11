@@ -10,21 +10,22 @@ function check() {
     });
 }
 
-window.addEventListener('scroll', check);
-window.addEventListener('load', check);
-
 const box = document.querySelector('.wrap_box');
 
-window.addEventListener('scroll', () => {
-    const rect = box.getBoundingClientRect();
-    const progress = Math.min(Math.max((window.innerHeight - rect.top) / window.innerHeight, 0), 1);
+if (window.innerWidth > 768) {
+    window.addEventListener('scroll', () => {
+        const rect = box.getBoundingClientRect();
+        const progress = Math.min(
+            Math.max((window.innerHeight - rect.top) / window.innerHeight, 0),
+            1
+        );
 
-    box.style.width = `${420 + (1150 - 420) * progress}px`;
+        box.style.width = `${420 + (1150 - 420) * progress}px`;
 
-    // 원(50%) → 완전 pill(999px)
-    const radius = 50 + (999 - 50) * progress;
-    box.style.borderRadius = `${radius}px`;
-});
+        const radius = 50 + (999 - 50) * progress;
+        box.style.borderRadius = `${radius}px`;
+    });
+}
 
 window.addEventListener('scroll', () => {
     const sec2 = document.querySelector('.about_me');
