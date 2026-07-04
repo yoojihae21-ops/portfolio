@@ -840,9 +840,9 @@ h1 {
         margin-bottom: 80px;
     }
 
-    .con_item:last-child {
+    /* .con_item:last-child {
         display: none;
-    }
+    } */
 
     .about_skill {
         padding: 0 20px;
